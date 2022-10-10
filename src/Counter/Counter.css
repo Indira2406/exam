@@ -1,0 +1,27 @@
+.counter {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.counter__content {
+    font-size: 30px;
+    padding: 10px 30px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #bdcdd6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.red {
+    color: red;
+}
+
+.counter__buttons {
+    display: flex;
+    gap: 20px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
