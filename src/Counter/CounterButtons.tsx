@@ -9,11 +9,12 @@ type CounterButtonsType = {
   STARTVALUE: number;
 }
 export function CounterButtons(props: CounterButtonsType) {
-  const incBtn = <span>inc</span>
+  console.log(props.STARTVALUE, props.count);
+
   return (
       <div className="counter__buttons">
-        <Button onClick={props.countInc} disabled={props.count >= props.MAXVALUE}>{incBtn}</Button>
-        <Button onClick={props.countReset} disabled={props.count !== props.STARTVALUE}>reset</Button>
+        <Button onClick={props.countInc} disabled={props.count >= props.MAXVALUE}>inc</Button>
+        <Button onClick={props.countReset} disabled={props.count === props.STARTVALUE}>reset</Button>
       </div>
   );
 };
