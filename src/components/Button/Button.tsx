@@ -4,7 +4,7 @@ import './Button.css';
 type ButtonType = {
   onClick: ()=> void;
   className?: string;
-  disabled: boolean;
+  disabled?: boolean;
   children: React.ReactNode;
 }
 export function Button (props: ButtonType) {

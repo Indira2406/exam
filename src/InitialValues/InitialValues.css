@@ -1,0 +1,40 @@
+.counter__error {
+  display: block;
+  font-size: 10px;
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.counter__inputs {
+  width: min-content;
+}
+
+.counter__input {
+  border: 1px solid #bdcdd6;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.input_error {
+  border: 2px solid red;
+  outline: none;
+}
+.red {
+  color: red;
+}
+
+.counter-set {
+  margin: 10px auto 0;
+  display: block;
+}
+
+.counter__labels {
+  font-size: 14px;
+  font-weight: 500;
+}
+.counter-values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
