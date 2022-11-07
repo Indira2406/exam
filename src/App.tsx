@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { Counter } from "./Counter/Counter";
 import { InitialValues } from "./InitialValues/InitialValues";
@@ -31,6 +31,7 @@ function App() {
     const newStartValue = +startValueInputRef.current.value;
     const newMaxValue = +maxValueInputRef.current.value;
     const isError = newStartValue >= newMaxValue;
+    
     setMaxValue(newMaxValue);
     setStartValue(newStartValue);
     setCount(newStartValue);
@@ -41,6 +42,19 @@ function App() {
   const backtoValues = () => {
     setCounterVisible(false)
   }
+
+  useEffect(()=> {
+    let valueAsString = localStorage.getItem('counterValue');
+    if(valueAsString) {
+      let newValue = JSON.parse(valueAsString);
+      setCount(newValue)
+    }
+  }, [])
+
+  useEffect(()=> {
+    localStorage.setItem('counterValue', JSON.stringify(count))
+  }, [count])
+
   return (
     <div className="App">
       {!counterVisible ? (
